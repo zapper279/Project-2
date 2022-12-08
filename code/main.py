@@ -271,14 +271,26 @@ def instructions():
         RIGHT_RECT = RIGHT_TEXT.get_rect(center=(375, 325))
         SPACE_TEXT = get_font(35).render("Space bar to shoot", True, "Black")
         SPACE_RECT = SPACE_TEXT.get_rect(center=(375, 375))
+        HEALTH_TEXT = get_font(35).render("If the health bar turns all red, you lose", True, "Black")
+        HEALTH_RECT = HEALTH_TEXT.get_rect(center=(375, 425))
+        ENEMIES_TEXT = get_font(25).render("If the enemies ships get to the other side, you lose 1 live", True, "Black")
+        ENEMIES_RECT = ENEMIES_TEXT.get_rect(center=(375, 475))
+        LIVES_TEXT = get_font(35).render("When your lives reaches 0, you lose", True, "Black")
+        LIVES_RECT = LIVES_TEXT.get_rect(center=(375, 525))
+        VICTORY_TEXT = get_font(35).render("Complete all levels to win", True, "Black")
+        VICTORY_RECT = VICTORY_TEXT.get_rect(center=(375, 575))
         WIN.blit(INSTRUCTION_TEXT, INSTRUCTION_RECT)
         WIN.blit(UP_TEXT, UP_RECT)
         WIN.blit(DOWN_TEXT, DOWN_RECT)
         WIN.blit(LEFT_TEXT, LEFT_RECT)
         WIN.blit(RIGHT_TEXT, RIGHT_RECT)
         WIN.blit(SPACE_TEXT, SPACE_RECT)
+        WIN.blit(HEALTH_TEXT, HEALTH_RECT)
+        WIN.blit(ENEMIES_TEXT, ENEMIES_RECT)
+        WIN.blit(LIVES_TEXT, LIVES_RECT)
+        WIN.blit(VICTORY_TEXT, VICTORY_RECT)
 
-        INSTRUCTION_BACK = Button(image=None, pos=(375, 525),
+        INSTRUCTION_BACK = Button(image=None, pos=(375, 650),
                               text_input="BACK", font=get_font(40), base_color="Black", hovering_color="Red")
 
         INSTRUCTION_BACK.changeColor(INSTRUCTION_MOUSE_POS)
